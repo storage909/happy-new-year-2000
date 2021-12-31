@@ -92,8 +92,8 @@ Firework.prototype.update = function (index) {
 	this.coordinates.unshift([this.x, this.y]);
 
 	// cycle the circle target indicator radius
-	if (this.targetRadius < 8) {
-		this.targetRadius += 0.3;
+	if (this.targetRadius < 9) {
+		this.targetRadius += 0.2;
 	} else {
 		this.targetRadius = 1;
 	}
@@ -146,15 +146,15 @@ function Particle(x, y) {
 	}
 	// set a random angle in all possible directions, in radians
 	this.angle = random(0, Math.PI * 2);
-	this.speed = random(1, 10);
+	this.speed = random(3, 40);
 	// friction will slow the particle down
 	this.friction = 0.95;
 	// gravity will be applied and pull the particle down
 	this.gravity = 1;
 	// set the hue to a random number +-50 of the overall hue variable
 	this.hue = random(hue - 50, hue + 50);
-	this.brightness = random(50, 80);
-	this.alpha = 1;
+	this.brightness = random(500, 800);
+	this.alpha = 10 ;
 	// set how fast the particle fades out
 	this.decay = random(0.015, 0.03);
 }
